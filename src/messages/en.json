@@ -1,0 +1,24 @@
+{
+  "LandingPage": {
+    "hero": {
+      "backgroundAlt": "A row of electric scooters parked in the city",
+      "title": "Own an asset that generates daily income without operations or complexity",
+      "tag": "with EV Share",
+      "description": "Simply put, you own an income-generating asset while we fully handle operations and maintenance.",
+      "benefits": "Start earning daily returns with low upfront investment and build a steady recurring income stream.",
+      "primaryCta": "Start now",
+      "secondaryCta": "Learn more"
+    },
+    "passiveIncome": {
+      "title": "Imagine earning daily income without operating it?",
+      "description": "Every scooter and every bike you own through EV Share works for you every day, creating steady income. While people keep using transport, your earnings keep growing. No management, no operation, no complexity. You own the asset and we handle the rest."
+    },
+    "chooseAsset": {
+      "title": "Choose the right asset for you",
+      "descriptionStart": "EV Share provides a portfolio of modern technical assets",
+      "brand": "EV Share",
+      "descriptionEnd": "designed to generate consistent income through a smart, advanced operating system.",
+      "descriptionLine2": ""
+    }
+  }
+}
