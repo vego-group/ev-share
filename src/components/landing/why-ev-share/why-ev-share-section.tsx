@@ -37,7 +37,7 @@ export function WhyEvShareSection() {
           {t("title")}
         </h2>
 
-        <div className="mt-14 grid grid-cols-2 justify-items-center gap-y-10 sm:grid-cols-3 lg:mt-16 lg:grid-cols-5 lg:gap-y-0">
+        <div className="mt-14 grid grid-cols-2 justify-items-center gap-y-10 sm:grid-cols-3 lg:mt-16 lg:grid-cols-4 lg:gap-y-0">
           {whyEvShareItems.map((item) => (
             <WhyEvShareItem
               key={item.key}

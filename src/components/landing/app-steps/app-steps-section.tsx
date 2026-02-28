@@ -7,10 +7,10 @@ export function AppStepsSection() {
   const t = useTranslations("LandingPage.appSteps");
 
   const steps = [
-    { key: "step1", imageSrc: "/images/app-1.jpg" },
-    { key: "step2", imageSrc: "/images/app-2.jpg" },
-    { key: "step3", imageSrc: "/images/app-3.jpg" },
-    { key: "step4", imageSrc: "/images/app-4.jpg" },
+    { key: "step1" },
+    { key: "step2" },
+    { key: "step3" },
+    { key: "step4" },
   ];
 
   return (
@@ -20,7 +20,6 @@ export function AppStepsSection() {
           {steps.map((step, i) => (
             <AppStepCard
               key={step.key}
-              imageSrc={step.imageSrc}
               number={t(`${step.key}.number`)}
               title={t(`${step.key}.title`)}
               body={t(`${step.key}.body`)}

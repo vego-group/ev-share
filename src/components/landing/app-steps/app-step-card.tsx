@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 type AppStepCardProps = {
-  imageSrc: string;
   number: string;
   title: string;
   body: string;
@@ -12,7 +11,6 @@ type AppStepCardProps = {
 };
 
 export function AppStepCard({
-  imageSrc,
   number,
   title,
   body,
@@ -26,20 +24,6 @@ export function AppStepCard({
       transition={{ duration: 0.5, delay, ease: "easeOut" }}
       className="flex flex-col items-center text-center"
     >
-      <motion.div
-        className=""
-        animate={{ y: [0, -5, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay }}
-      >
-        <Image
-          src={imageSrc}
-          alt={title}
-          height={100}
-          width={500}
-          className="object-contain rounded-md"
-        />
-      </motion.div>
-
       <p className="mt-4 text-[32px] font-bold leading-none text-primary md:text-[42px]">
         {number}
       </p>

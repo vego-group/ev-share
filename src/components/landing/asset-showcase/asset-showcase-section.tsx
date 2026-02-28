@@ -14,7 +14,6 @@ export function AssetShowcaseSection() {
             description={t(`cards.${card.key}.description`)}
             cta={t(`cards.${card.key}.cta`)}
             imageSrc={card.imageSrc}
-            href={card.href}
           />
         ))}
       </div>

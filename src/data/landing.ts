@@ -4,17 +4,14 @@ export const showcaseCards: ShowcaseCard[] = [
   {
     key: "bike",
     imageSrc: "/images/bike.jpg",
-    href: "/bike",
   },
   {
     key: "scooter",
     imageSrc: "/images/scooter.jpg",
-    href: "/scooter",
   },
   {
     key: "car",
     imageSrc: "/images/car.jpg",
-    href: "/car",
   },
 ];
 
@@ -23,5 +20,4 @@ export const whyEvShareItems = [
   { key: "item2", icon: "/images/icon-2.svg" },
   { key: "item3", icon: "/images/icon-3.svg" },
   { key: "item4", icon: "/images/icon-4.svg" },
-  { key: "item5", icon: "/images/icon-5.svg" },
 ];

@@ -39,7 +39,7 @@
           "cta": "Learn more"
         },
         "bike": {
-          "title": "Electric Bikes",
+          "title": "Smart Bikes",
           "description": "A practical and excellent investment choice for daily commuting.",
           "cta": "Learn more"
         }
@@ -51,8 +51,7 @@
         "item1": "Full asset management through an advanced control dashboard.",
         "item2": "Smart interactive platform.",
         "item3": "Multiple operating options with trusted partners.",
-        "item4": "An asset that is fully yours, without operating hassle.",
-        "item5": "An investment asset that gives you recurring returns."
+        "item4": "An asset that is fully yours, without operating hassle."
       }
     },
     "appSteps": {
@@ -64,7 +63,7 @@
       "step2": {
         "number": "02",
         "title": "Choose from available assets",
-        "body": "Select from electric scooters and e-bikes.\nEach asset appears with full performance details inside the EV Share operating platform."
+        "body": "Select from electric scooters and smart bikes.\nEach asset appears with full performance details inside the EV Share operating platform."
       },
       "step3": {
         "number": "03",
@@ -155,9 +154,9 @@
     "button": "Subscribe now"
   },
   "BikePage": {
-    "imageAlt": "EV Share electric bike asset",
-    "title": "Electric Bikes",
-    "intro": "Electric bikes combine practical commuting value with attractive operating flexibility.",
+    "imageAlt": "EV Share smart bike asset",
+    "title": "Smart Bikes",
+    "intro": "Smart bikes combine practical commuting value with attractive operating flexibility.",
     "body1": "They are suitable for daily trips and can maintain healthy usage rates with a sustainable operation pattern.",
     "body2": "For investors, this model offers a balanced route between affordability, demand, and recurring returns.",
     "highlightsTitle": "Key Highlights",
