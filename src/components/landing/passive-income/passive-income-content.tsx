@@ -17,7 +17,7 @@ export function PassiveIncomeContent({
         </div>
       </div>
 
-      <div className="mt-8 xl:mt-14 w-full flex justify-end max-w-6xl text-base leading-8 text-secondary md:text-[29px] md:leading-[1.6]">
+      <div className="mt-8 xl:mt-14 w-full font-medium flex justify-end max-w-6xl text-base leading-8 text-secondary md:text-[29px] md:leading-[1.6]">
         <p className="max-w-2xl"> {description}</p>
       </div>
     </div>

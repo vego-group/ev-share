@@ -14,7 +14,7 @@ export function ChooseAssetContent({
   descriptionLine2,
 }: ChooseAssetContentProps) {
   return (
-    <div className="mx-auto w-full max-w-205 text-center text-secondary">
+    <div className="mx-auto w-full max-w-240 text-center text-secondary">
       <h2 className="text-3xl font-bold leading-tight md:text-[48px]">
         {title}
       </h2>

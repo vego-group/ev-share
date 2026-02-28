@@ -1,6 +1,8 @@
 import Image from "next/image";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
+import { use } from "react";
+import { useLocale } from "next-intl";
 
 type AssetShowcaseCardProps = {
   title: string;
@@ -17,6 +19,8 @@ export function AssetShowcaseCard({
   imageSrc,
   href,
 }: AssetShowcaseCardProps) {
+  const locale = useLocale();
+  const Arrow = locale === "ar" ? ChevronRight : ChevronLeft;
   return (
     <article className="group relative min-h-[420px] overflow-hidden border border-white/20 bg-black md:min-h-[680px]">
       <Image
@@ -44,8 +48,8 @@ export function AssetShowcaseCard({
             href={href}
             className="inline-flex items-center gap-3 text-lg font-medium text-white underline decoration-primary decoration-2 underline-offset-8 md:text-[20px]"
           >
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-secondary md:h-14 md:w-14">
-              <ChevronLeft className="h-5 w-5 md:h-7 md:w-7" />
+            <span className="inline-flex size-8 items-center justify-center rounded-full bg-primary text-secondary">
+              <Arrow className="h-5 w-5 md:h-7 md:w-7" />
             </span>
             {cta}
           </Link>

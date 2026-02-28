@@ -39,7 +39,7 @@ export function QuickStartSection() {
           animate={{ y: [0, -8, 0] }}
           className="relative mt-10"
         >
-          <div className="relative h-[360px] w-[210px] md:h-[430px] md:w-[250px]">
+          <div className="relative h-[360px] w-[210px] md:h-[430px] md:w-[25  0px]">
             <Image
               src="/images/mobile.jpg"
               alt={t("mobileAlt")}

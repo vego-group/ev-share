@@ -6,7 +6,7 @@ export function ChooseAssetSection() {
 
   return (
     <section className="bg-primary py-16 md:py-24">
-      <div className="mx-auto w-full max-w-300 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-400 px-4 sm:px-6 lg:px-8">
         <ChooseAssetContent
           title={t("title")}
           descriptionStart={t("descriptionStart")}

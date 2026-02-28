@@ -9,7 +9,7 @@ export function WhyEvShareSection() {
   const t = useTranslations("LandingPage.whyEvShare");
 
   return (
-    <section className="relative isolate min-h-135 overflow-hidden border-t border-primary bg-[#0b0d12] py-12 md:min-h-162.5 md:py-16">
+    <section className="relative isolate min-h-135 flex items-center overflow-hidden border-t border-primary bg-[#0b0d12] py-12 md:min-h-162.5 md:py-16">
       <motion.div
         aria-hidden
         className="absolute -inset-s-[18%] top-[12%] h-130 w-230 rounded-[50%] border border-[#d8b43a]/20 bg-[#b79a2a]/10 blur-[2px]"
