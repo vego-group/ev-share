@@ -20,12 +20,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sherif Faranca",
+  title: "EV SHARE",
   description:
-    "Achieve your fitness goals with Sherif Faranca — personalized workouts, expert tips, and real results. Start your transformation today.",
-  icons: {
-    icon: "/favicon.svg",
-  },
+    "EV SHARE is a smart mobility sharing platform for scooters, bikes, and cars. Book in minutes, ride freely, and pay based on your usage.",
 };
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

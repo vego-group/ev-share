@@ -9,6 +9,12 @@
       "primaryCta": "Start now",
       "secondaryCta": "Learn more"
     },
+    "quickStart": {
+      "title": "Start in minutes",
+      "subtitleLine1": "In four simple steps",
+      "subtitleLine2": "and begin your income journey",
+      "mobileAlt": "EV Share mobile app preview"
+    },
     "passiveIncome": {
       "title": "Imagine earning daily income without operating it?",
       "description": "Every scooter and every bike you own through EV Share works for you every day, creating steady income. While people keep using transport, your earnings keep growing. No management, no operation, no complexity. You own the asset and we handle the rest."
@@ -19,6 +25,107 @@
       "brand": "EV Share",
       "descriptionEnd": "designed to generate consistent income through a smart, advanced operating system.",
       "descriptionLine2": ""
+    },
+    "assetShowcase": {
+      "cards": {
+        "car": {
+          "title": "Cars",
+          "description": "Strong long-term income and returns.",
+          "cta": "Learn more"
+        },
+        "scooter": {
+          "title": "Electric Scooters",
+          "description": "A smart asset at a suitable cost, highly demanded in cities.",
+          "cta": "Learn more"
+        },
+        "bike": {
+          "title": "Electric Bikes",
+          "description": "A practical and excellent investment choice for daily commuting.",
+          "cta": "Learn more"
+        }
+      }
+    },
+    "whyEvShare": {
+      "title": "Why EV Share?",
+      "items": {
+        "item1": "Full asset management through an advanced control dashboard.",
+        "item2": "Smart interactive platform.",
+        "item3": "Multiple operating options with trusted partners.",
+        "item4": "An asset that is fully yours, without operating hassle.",
+        "item5": "An investment asset that gives you recurring returns."
+      }
+    },
+    "appSteps": {
+      "step1": {
+        "number": "01",
+        "title": "Subscribe to the platform",
+        "body": "Replace free access with only SAR 399 for lifetime and download the app.\nGet instant access to all assets and your full investor dashboard."
+      },
+      "step2": {
+        "number": "02",
+        "title": "Choose from available assets",
+        "body": "Select from electric scooters and e-bikes.\nEach asset appears with full performance details inside the EV Share operating platform."
+      },
+      "step3": {
+        "number": "03",
+        "title": "Choose operation mode",
+        "body": "EV Share offers a complete, modern system with flexible operation models.\nOwn and let us operate, or choose your preferred mode within EV Share."
+      },
+      "step4": {
+        "number": "04",
+        "title": "Start tracking your profits",
+        "body": "After operation starts, your assets begin generating daily income.\nMonitor income, expenses, and net returns clearly from one dashboard."
+      }
+    },
+    "profitCta": {
+      "title": "Start generating profits today",
+      "subtitle": "Own your assets, and keep tracking your returns",
+      "button": "Subscribe now"
+    },
+    "footer": {
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "contactUs": "Contact Us"
     }
+  },
+  "PrivacyPolicyPage": {
+    "title": "Privacy Policy",
+    "updatedAt": "Last updated: February 28, 2026",
+    "introTitle": "Introduction",
+    "introBody": "EV Share respects your privacy and is committed to protecting your personal information. This policy explains what we collect, why we collect it, and how we use and protect it.",
+    "collectionTitle": "Information We Collect",
+    "collectionBody": "We may collect account details (name, phone, email), identity verification details, payment details, and platform usage data such as device information, activity logs, and preferences.",
+    "useTitle": "How We Use Information",
+    "useBody": "We use information to create and manage your account, process transactions, provide platform services, improve user experience, communicate updates, and comply with legal obligations.",
+    "sharingTitle": "Sharing and Disclosure",
+    "sharingBody": "We do not sell personal data. We may share data with trusted service providers, payment partners, compliance partners, and authorities when legally required.",
+    "securityTitle": "Security and Retention",
+    "securityBody": "We apply reasonable technical and organizational safeguards to protect your data. We retain personal information only as long as needed for service delivery, legal compliance, and dispute resolution.",
+    "rightsTitle": "Your Rights",
+    "rightsBody": "You may request access, correction, or deletion of your information where permitted by law. You may also request restriction of processing or object to specific uses.",
+    "contactTitle": "Contact",
+    "contactBody": "For privacy requests, contact us at support@evshare.sa."
+  },
+  "TermsPage": {
+    "title": "Terms of Service",
+    "updatedAt": "Last updated: February 28, 2026",
+    "scopeTitle": "Scope",
+    "scopeBody": "These terms govern your access to and use of EV Share services, applications, and related platform features.",
+    "accountTitle": "Account Responsibilities",
+    "accountBody": "You are responsible for keeping your account credentials secure and for all actions under your account.\nYou must provide accurate and up-to-date information.",
+    "investmentTitle": "Assets and Operations",
+    "investmentBody": "Asset availability, performance indicators, and operation models are presented through the platform.\nReturns are subject to operational and market conditions.",
+    "liabilityTitle": "Limitations",
+    "liabilityBody": "EV Share provides services on a best-effort basis and does not guarantee uninterrupted availability.\nTo the extent allowed by law, EV Share is not liable for indirect or consequential damages.",
+    "changesTitle": "Changes to Terms",
+    "changesBody": "We may update these terms from time to time. Continued use of the service after updates means acceptance of the revised terms."
+  },
+  "ContactPage": {
+    "title": "Contact Us",
+    "description": "We are happy to help with any question about your account, assets, platform access, or operations.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "hoursLabel": "Working hours",
+    "hoursValue": "Sunday to Thursday, 9:00 AM to 6:00 PM"
   }
 }
