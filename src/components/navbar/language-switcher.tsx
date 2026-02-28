@@ -23,7 +23,7 @@ export function LanguageSwitcher() {
       aria-label={`Switch language to ${nextLocale.toUpperCase()}`}
     >
       <span>{locale.toUpperCase()}</span>
-      <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary text-secondary">
+      <span className="inline-flex size-5 items-center justify-center rounded-full bg-primary text-secondary">
         <Globe size={12} />
       </span>
     </button>

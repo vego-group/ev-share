@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { use } from "react";
 import { useLocale } from "next-intl";
 
 type AssetShowcaseCardProps = {

@@ -4,17 +4,17 @@ export const showcaseCards: ShowcaseCard[] = [
   {
     key: "bike",
     imageSrc: "/images/bike.jpg",
-    href: "/",
+    href: "/bike",
   },
   {
     key: "scooter",
     imageSrc: "/images/scooter.jpg",
-    href: "/",
+    href: "/scooter",
   },
   {
     key: "car",
     imageSrc: "/images/car.jpg",
-    href: "/",
+    href: "/car",
   },
 ];
 

@@ -8,7 +8,7 @@ export function Logo() {
       aria-label="EV Share home"
       className="inline-flex items-center"
     >
-      <div className="relative h-20 w-45">
+      <div className="relative h-15 w-35 md:h-20 md:w-45">
         <Image
           fill
           src="/images/logo.svg"

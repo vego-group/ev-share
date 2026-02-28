@@ -41,7 +41,7 @@ export function QuickStartSection() {
         >
           <div className="relative h-[360px] w-[210px] md:h-[430px] md:w-[25  0px]">
             <Image
-              src="/images/mobile.jpg"
+              src="/images/mobile.jpeg"
               alt={t("mobileAlt")}
               fill
               priority
