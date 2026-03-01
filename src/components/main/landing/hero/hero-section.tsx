@@ -10,7 +10,7 @@ export function HeroSection() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative isolate min-h-[calc(100vh-76px)] overflow-hidden bg-secondary">
+    <section className="-mt-0.5 relative min-h-[calc(100svh-76px)] overflow-hidden bg-secondary pt-0.5">
       <motion.div
         initial={reduceMotion ? undefined : { scale: 1.08, opacity: 0.72 }}
         animate={reduceMotion ? undefined : { scale: 1, opacity: 1 }}
