@@ -4,10 +4,9 @@
       "backgroundAlt": "A row of electric scooters parked in the city",
       "title": "Own an asset that generates daily income without operations or complexity",
       "tag": "with EV Share",
-      "description": "Simply put, you own an income-generating asset while we fully handle operations and maintenance.",
+      "description": "Simply put, you own an income-generating asset.",
       "benefits": "Start earning daily returns with low upfront investment and build a steady recurring income stream.",
-      "primaryCta": "Start now",
-      "secondaryCta": "Learn more"
+      "primaryCta": "Start now"
     },
     "quickStart": {
       "title": "Start in minutes",
@@ -57,8 +56,8 @@
     "appSteps": {
       "step1": {
         "number": "01",
-        "title": "Subscribe to the platform today",
-        "body": "only SAR 399 for lifetime and download the app.\nGet instant access to all assets and your full investor dashboard right away today."
+        "title": "Download the app now and start today",
+        "body": "Only SAR 388 for lifetime access download the app.\nGet instant full access to all assets and the merchant dashboard with ease now."
       },
       "step2": {
         "number": "02",
@@ -126,45 +125,6 @@
     "phoneLabel": "Phone",
     "hoursLabel": "Working hours",
     "hoursValue": "Sunday to Thursday, 9:00 AM to 6:00 PM"
-  },
-  "CarPage": {
-    "imageAlt": "EV Share car asset",
-    "title": "Cars Investment",
-    "intro": "Cars are one of the most stable long-term assets in smart urban mobility.",
-    "body1": "Through EV Share, your vehicle is managed with a clear operation model and continuous monitoring from one dashboard.",
-    "body2": "This option suits investors looking for balanced growth, operational clarity, and recurring monthly performance.",
-    "highlightsTitle": "Key Highlights",
-    "point1": "Steady long-term income potential",
-    "point2": "Clear operational reports and status",
-    "point3": "Smart tracking through EV Share platform",
-    "point4": "Flexible investment visibility in one place",
-    "button": "Subscribe now"
-  },
-  "ScooterPage": {
-    "imageAlt": "EV Share electric scooter asset",
-    "title": "Electric Scooters",
-    "intro": "Electric scooters provide fast turnover and high demand inside dense city zones.",
-    "body1": "The EV Share operating model is built to maximize daily utilization while maintaining asset quality and uptime.",
-    "body2": "This option is ideal for investors who prefer practical entry cost and strong day-to-day movement.",
-    "highlightsTitle": "Key Highlights",
-    "point1": "Strong demand in short-distance mobility",
-    "point2": "Efficient operating cycles and usage",
-    "point3": "Simple monitoring through digital dashboard",
-    "point4": "Daily performance visibility",
-    "button": "Subscribe now"
-  },
-  "BikePage": {
-    "imageAlt": "EV Share smart bike asset",
-    "title": "Smart Bikes",
-    "intro": "Smart bikes combine practical commuting value with attractive operating flexibility.",
-    "body1": "They are suitable for daily trips and can maintain healthy usage rates with a sustainable operation pattern.",
-    "body2": "For investors, this model offers a balanced route between affordability, demand, and recurring returns.",
-    "highlightsTitle": "Key Highlights",
-    "point1": "Practical fit for daily urban transport",
-    "point2": "Balanced cost versus performance",
-    "point3": "Clear operation data and tracking",
-    "point4": "Reliable recurring return potential",
-    "button": "Subscribe now"
   },
   "AboutPage": {
     "logoAlt": "EV Share logo",

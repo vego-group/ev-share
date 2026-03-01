@@ -15,7 +15,6 @@ export function HeroContent({
   description,
   benefits,
   primaryCta,
-  secondaryCta,
 }: HeroContentProps) {
   return (
     <div className="max-w-xl text-white">
@@ -33,7 +32,7 @@ export function HeroContent({
         {benefits}
       </p>
 
-      <HeroActions primaryLabel={primaryCta} secondaryLabel={secondaryCta} />
+      <HeroActions primaryLabel={primaryCta} />
     </div>
   );
 }

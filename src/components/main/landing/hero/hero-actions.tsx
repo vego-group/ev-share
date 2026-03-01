@@ -3,25 +3,13 @@ import { Button } from "@/components/ui/button";
 
 type HeroActionsProps = {
   primaryLabel: string;
-  secondaryLabel: string;
 };
 
-export function HeroActions({
-  primaryLabel,
-  secondaryLabel,
-}: HeroActionsProps) {
+export function HeroActions({ primaryLabel }: HeroActionsProps) {
   return (
-    <div className="mt-8 flex flex-wrap items-center gap-3">
+    <div className="mt-8">
       <Button asChild>
         <Link href="/about">{primaryLabel}</Link>
-      </Button>
-
-      <Button
-        asChild
-        variant="outline"
-        className="border-primary/70 bg-transparent text-primary hover:bg-primary hover:text-secondary"
-      >
-        <Link href="/">{secondaryLabel}</Link>
       </Button>
     </div>
   );

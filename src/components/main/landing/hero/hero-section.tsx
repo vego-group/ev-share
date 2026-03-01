@@ -42,7 +42,7 @@ export function HeroSection() {
           duration: 0.75,
           delay: 0.18,
         }}
-        className="relative mx-auto flex min-h-[calc(100vh-76px)] w-full max-w-300 items-center px-4 sm:px-6 lg:px-8"
+        className="relative mx-auto flex min-h-[calc(100vh-76px)] w-full max-w-7xl items-center px-4 sm:px-6 lg:px-8"
       >
         <HeroContent
           title={t("title")}
