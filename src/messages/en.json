@@ -57,13 +57,13 @@
     "appSteps": {
       "step1": {
         "number": "01",
-        "title": "Subscribe to the platform",
-        "body": "only SAR 399 for lifetime and download the app.\nGet instant access to all assets and your full investor dashboard."
+        "title": "Subscribe to the platform today",
+        "body": "only SAR 399 for lifetime and download the app.\nGet instant access to all assets and your full investor dashboard right away today."
       },
       "step2": {
         "number": "02",
         "title": "Choose from available assets",
-        "body": "Select from electric scooters and smart bikes.\nEach asset appears with full performance details inside the EV Share operating platform."
+        "body": "Select from electric scooters and smart bikes.\nEach asset appears with full performance details inside the EV Share operating platform with complete ease."
       },
       "step3": {
         "number": "03",
@@ -72,7 +72,7 @@
       },
       "step4": {
         "number": "04",
-        "title": "Start tracking your profits",
+        "title": "Start tracking your daily profits",
         "body": "After operation starts, your assets begin generating daily income.\nMonitor income, expenses, and net returns clearly from one dashboard."
       }
     },

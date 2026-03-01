@@ -26,7 +26,7 @@ export function AppStepCard({
       <p className="mt-4 text-[32px] font-bold leading-none text-primary md:text-[42px]">
         {number}
       </p>
-      <h3 className="mt-2 text-lg font-bold text-secondary md:text-[24px] md:leading-tight">
+      <h3 className="mt-2 max-w-55 text-lg font-bold text-secondary md:text-[24px] md:leading-tight">
         {title}
       </h3>
       <p className="mt-2 max-w-65 font-medium leading-6 text-secondary/90 md:text-[14px] md:leading-7">
