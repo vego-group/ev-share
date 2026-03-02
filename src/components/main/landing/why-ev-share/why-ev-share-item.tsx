@@ -11,7 +11,7 @@ export function WhyEvShareItem({ icon, text }: WhyEvShareItemProps) {
       <div className="flex h-29 w-29 items-center justify-center rounded-full bg-primary">
         <Image
           src={icon}
-          alt=""
+          alt={text}
           width={72}
           height={72}
           className="h-18 w-18 object-contain"
