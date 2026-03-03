@@ -27,7 +27,7 @@ export function ContactReachCard() {
           <strong>{t("emailLabel")}:</strong> info@evshare.app
         </Link>
         <Link
-          href="tel:+966115001468"
+          href="https://wa.me/966115001468"
           target="_blank"
           rel="noopener noreferrer"
         >
