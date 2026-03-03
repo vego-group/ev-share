@@ -1,6 +1,7 @@
 ﻿import { motion, useReducedMotion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export function ContactReachCard() {
   const t = useTranslations("ContactPage");
@@ -17,14 +18,22 @@ export function ContactReachCard() {
         <Sparkles className="size-5" />
       </div>
       <h2 className="text-xl font-bold md:text-2xl">{t("reachTitle")}</h2>
-      <div className="mt-5 space-y-3 text-sm leading-7 md:text-base">
-        <p>
-          <strong>{t("emailLabel")}:</strong> support@evshare.sa
-        </p>
-        <p>
+      <div className="mt-5 flex flex-col gap-3 text-sm leading-7 md:text-base">
+        <Link
+          href="mailto:info@evshare.app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <strong>{t("emailLabel")}:</strong> info@evshare.app
+        </Link>
+        <Link
+          href="tel:+966115001468"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <strong>{t("phoneLabel")}:</strong>{" "}
-          <span dir="ltr">+966 50 000 0000</span>
-        </p>
+          <span dir="ltr">+966 11 500 1468</span>
+        </Link>
         <p>
           <strong>{t("hoursLabel")}:</strong> {t("hoursValue")}
         </p>
