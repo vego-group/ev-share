@@ -1,10 +1,10 @@
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-import { ContactFormValues, createContactSchema } from "@/schemas";
+import { contactSchema, type ContactSchema } from "@/schemas";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 const fieldClassName =
   "h-13 w-full rounded-2xl border border-secondary/15 bg-white px-4 text-start text-base text-secondary outline-none transition duration-200 placeholder:text-start placeholder:text-secondary/45 focus:border-primary focus:ring-3 focus:ring-primary/35";
@@ -15,29 +15,15 @@ const errorTextClassName = "mt-2 text-sm text-red-600";
 export function ContactForm() {
   const t = useTranslations("ContactPage");
   const reduceMotion = useReducedMotion();
-
-  const schema = useMemo(
-    () =>
-      createContactSchema({
-        emailInvalid: t("errors.emailInvalid"),
-        messageMax: t("errors.messageMax"),
-        messageMin: t("errors.messageMin"),
-        nameMax: t("errors.nameMax"),
-        nameMin: t("errors.nameMin"),
-        phoneDigitsOnly: t("errors.phoneDigitsOnly"),
-        phoneInvalid: t("errors.phoneInvalid"),
-        subjectRequired: t("errors.subjectRequired"),
-      }),
-    [t],
-  );
+  const getValidationMsg = (msg?: string) =>
+    msg ? t(msg as never) : undefined;
 
   const {
-    clearErrors,
     formState: { errors },
     handleSubmit,
     register,
-    setError,
-  } = useForm<ContactFormValues>({
+  } = useForm<ContactSchema>({
+    resolver: zodResolver(contactSchema),
     defaultValues: {
       email: "",
       message: "",
@@ -45,29 +31,10 @@ export function ContactForm() {
       phone: "",
       subject: "",
     },
-    mode: "onSubmit",
+    mode: "onChange",
   });
 
-  const onSubmit = handleSubmit((values) => {
-    clearErrors();
-    const parsed = schema.safeParse(values);
-
-    if (!parsed.success) {
-      const fieldsWithError = new Set<string>();
-      for (const issue of parsed.error.issues) {
-        const field = issue.path[0];
-        if (typeof field !== "string" || fieldsWithError.has(field)) {
-          continue;
-        }
-        fieldsWithError.add(field);
-        setError(field as keyof ContactFormValues, {
-          message: issue.message,
-          type: "manual",
-        });
-      }
-      return;
-    }
-  });
+  const onSubmit = handleSubmit(() => {});
 
   return (
     <motion.form
@@ -87,7 +54,9 @@ export function ContactForm() {
             {...register("name")}
           />
           {errors.name ? (
-            <p className={errorTextClassName}>{errors.name.message}</p>
+            <p className={errorTextClassName}>
+              {getValidationMsg(errors.name.message) ?? errors.name.message}
+            </p>
           ) : null}
         </label>
         <label className="block">
@@ -99,7 +68,9 @@ export function ContactForm() {
             {...register("email")}
           />
           {errors.email ? (
-            <p className={errorTextClassName}>{errors.email.message}</p>
+            <p className={errorTextClassName}>
+              {getValidationMsg(errors.email.message) ?? errors.email.message}
+            </p>
           ) : null}
         </label>
       </div>
@@ -151,7 +122,9 @@ export function ContactForm() {
             />
           </div>
           {errors.phone ? (
-            <p className={errorTextClassName}>{errors.phone.message}</p>
+            <p className={errorTextClassName}>
+              {getValidationMsg(errors.phone.message) ?? errors.phone.message}
+            </p>
           ) : null}
         </label>
         <label className="block">
@@ -170,7 +143,10 @@ export function ContactForm() {
             <option value="other">{t("subjectOther")}</option>
           </select>
           {errors.subject ? (
-            <p className={errorTextClassName}>{errors.subject.message}</p>
+            <p className={errorTextClassName}>
+              {getValidationMsg(errors.subject.message) ??
+                errors.subject.message}
+            </p>
           ) : null}
         </label>
       </div>
@@ -188,7 +164,9 @@ export function ContactForm() {
           {...register("message")}
         />
         {errors.message ? (
-          <p className={errorTextClassName}>{errors.message.message}</p>
+          <p className={errorTextClassName}>
+            {getValidationMsg(errors.message.message) ?? errors.message.message}
+          </p>
         ) : null}
       </label>
 

@@ -17,18 +17,22 @@ export function HeroContent({
   primaryCta,
 }: HeroContentProps) {
   return (
-    <div className="max-w-xl text-white">
-      <h1 className="text-2xl font-semibold leading-relaxed md:text-4xl">
+    <div className="w-full max-w-2xl text-white">
+      <p className="inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-semibold tracking-[0.14em] text-primary uppercase">
+        {tag}
+      </p>
+
+      <h1 className="mt-5 text-3xl font-semibold leading-tight text-balance sm:text-4xl md:text-5xl">
         {title}
       </h1>
 
-      <p className="mt-4 text-sm font-semibold text-primary">{tag}</p>
-
-      <p className="mt-2 max-w-lg text-sm text-white/85 md:text-base">
+      <p className="mt-5 max-w-xl text-base leading-relaxed text-white/90 md:text-lg">
         {description}
       </p>
 
-      <p className="mt-3 max-w-lg text-sm text-white/85 md:text-base">
+      <div className="mt-5 h-px w-16 bg-primary/55" />
+
+      <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/80 md:text-base">
         {benefits}
       </p>
 

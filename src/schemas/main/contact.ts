@@ -7,42 +7,27 @@ export const contactSubjectValues = [
   "other",
 ] as const;
 
-type ContactSchemaMessages = {
-  emailInvalid: string;
-  messageMax: string;
-  messageMin: string;
-  nameMax: string;
-  nameMin: string;
-  phoneDigitsOnly: string;
-  phoneInvalid: string;
-  subjectRequired: string;
-};
+export const contactSchema = z.object({
+  name: z.string().trim().min(2, "errors.nameMin").max(80, "errors.nameMax"),
+  email: z.string().trim().email("errors.emailInvalid"),
+  phone: z
+    .string()
+    .trim()
+    .regex(/^\d+$/, "errors.phoneDigitsOnly")
+    .min(8, "errors.phoneInvalid")
+    .max(12, "errors.phoneInvalid"),
+  subject: z
+    .string()
+    .min(1, "errors.subjectRequired")
+    .refine(
+      (value) =>
+        contactSubjectValues.includes(
+          value as (typeof contactSubjectValues)[number],
+        ),
+      "errors.subjectRequired",
+    ),
+  message: z.string().trim().min(10, "errors.messageMin").max(1000, "errors.messageMax"),
+});
 
-export const createContactSchema = (messages: ContactSchemaMessages) =>
-  z.object({
-    name: z.string().trim().min(2, messages.nameMin).max(80, messages.nameMax),
-    email: z.string().trim().email(messages.emailInvalid),
-    phone: z
-      .string()
-      .trim()
-      .regex(/^\d+$/, messages.phoneDigitsOnly)
-      .min(8, messages.phoneInvalid)
-      .max(12, messages.phoneInvalid),
-    subject: z
-      .string()
-      .min(1, messages.subjectRequired)
-      .refine(
-        (value) =>
-          contactSubjectValues.includes(value as (typeof contactSubjectValues)[number]),
-        messages.subjectRequired,
-      ),
-    message: z
-      .string()
-      .trim()
-      .min(10, messages.messageMin)
-      .max(1000, messages.messageMax),
-  });
-
-export type ContactFormValues = z.infer<
-  ReturnType<typeof createContactSchema>
->;
+export type ContactSchema = z.infer<typeof contactSchema>;
+export type ContactFormValues = ContactSchema;

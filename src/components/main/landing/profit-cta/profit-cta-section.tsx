@@ -53,7 +53,7 @@ export function ProfitCtaSection() {
             size="lg"
             className="mt-6 bg-white text-secondary hover:bg-white/90"
           >
-            <Link href="/">{t("button")}</Link>
+            <Link href="/partner">{t("button")}</Link>
           </Button>
         </motion.div>
       </div>

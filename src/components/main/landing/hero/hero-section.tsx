@@ -12,10 +12,10 @@ export function HeroSection() {
   return (
     <section className="-mt-0.5 relative min-h-[calc(100svh-76px)] overflow-hidden bg-secondary pt-0.5">
       <motion.div
-        initial={reduceMotion ? undefined : { scale: 1.08, opacity: 0.72 }}
+        initial={reduceMotion ? undefined : { scale: 1.06, opacity: 0.72 }}
         animate={reduceMotion ? undefined : { scale: 1, opacity: 1 }}
         transition={{
-          duration: 1.1,
+          duration: 1.2,
         }}
         className="absolute inset-0"
       >
@@ -32,7 +32,11 @@ export function HeroSection() {
         initial={reduceMotion ? undefined : { opacity: 0 }}
         animate={reduceMotion ? undefined : { opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.05 }}
-        className="absolute inset-0 bg-linear-to-r from-black/20 via-black/10 to-black/5"
+        className="absolute inset-0 bg-linear-to-br from-black/75 via-black/55 to-black/25"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_20%,rgba(255,255,255,0.18),transparent_34%),radial-gradient(circle_at_82%_78%,rgba(255,255,255,0.08),transparent_34%)]"
       />
 
       <motion.div
