@@ -32,7 +32,7 @@ function About() {
         size="sm"
         className="mt-8 bg-primary text-secondary hover:bg-primary/90"
       >
-        <Link href="/">{t("button")}</Link>
+        <Link href="/partner">{t("button")}</Link>
       </Button>
     </section>
   );
