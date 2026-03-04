@@ -14,8 +14,7 @@ export const contactSchema = z.object({
     .string()
     .trim()
     .regex(/^\d+$/, "errors.phoneDigitsOnly")
-    .min(8, "errors.phoneInvalid")
-    .max(12, "errors.phoneInvalid"),
+    .regex(/^[1-9]\d{8}$/, "errors.phoneInvalid"),
   subject: z
     .string()
     .min(1, "errors.subjectRequired")
@@ -31,3 +30,5 @@ export const contactSchema = z.object({
 
 export type ContactSchema = z.infer<typeof contactSchema>;
 export type ContactFormValues = ContactSchema;
+
+

@@ -153,7 +153,7 @@
     "fullNameLabel": "Full Name",
     "fullNamePlaceholder": "Ahmed Mohamed",
     "phoneLabel": "Mobile Number",
-    "phonePlaceholder": "552253991",
+    "phonePlaceholder": "11 500 1468",
     "cityLabel": "City",
     "cityPlaceholder": "Select your city",
     "countryCodeLabel": "Saudi Arabia code +966",
@@ -217,3 +217,4 @@
     "button": "Subscribe now"
   }
 }
+

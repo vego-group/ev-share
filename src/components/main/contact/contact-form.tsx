@@ -12,6 +12,15 @@ const fieldErrorClassName =
   "border-red-500 focus:border-red-500 focus:ring-red-200";
 const errorTextClassName = "mt-2 text-sm text-red-600";
 
+function formatSaudiLocalPhone(value: string) {
+  const digits = value.replace(/\D/g, "").slice(0, 9);
+
+  if (digits.length <= 2) return digits;
+  if (digits.length <= 5) return `${digits.slice(0, 2)} ${digits.slice(2)}`;
+
+  return `${digits.slice(0, 2)} ${digits.slice(2, 5)} ${digits.slice(5)}`;
+}
+
 export function ContactForm() {
   const t = useTranslations("ContactPage");
   const reduceMotion = useReducedMotion();
@@ -108,15 +117,16 @@ export function ContactForm() {
             <input
               type="tel"
               inputMode="numeric"
-              pattern="[0-9]*"
-              placeholder="552253991"
+              pattern="[0-9 ]*"
+              placeholder="11 500 1468"
               className="h-full w-full bg-transparent px-3 text-base text-secondary outline-none placeholder:text-secondary/45"
-              maxLength={12}
-              {...register("phone")}
+              maxLength={11}
+              {...register("phone", {
+                setValueAs: (value) => String(value ?? "").replace(/\D/g, ""),
+              })}
               onInput={(event) => {
-                event.currentTarget.value = event.currentTarget.value.replace(
-                  /\D/g,
-                  "",
+                event.currentTarget.value = formatSaudiLocalPhone(
+                  event.currentTarget.value,
                 );
               }}
             />
@@ -180,3 +190,4 @@ export function ContactForm() {
     </motion.form>
   );
 }
+

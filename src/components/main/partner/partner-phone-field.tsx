@@ -4,6 +4,15 @@ import { Button } from "@/components/ui/button";
 import { type PartnerSchema } from "@/schemas";
 import { errorTextClassName } from "./partner-field-styles";
 
+function formatSaudiLocalPhone(value: string) {
+  const digits = value.replace(/\D/g, "").slice(0, 9);
+
+  if (digits.length <= 2) return digits;
+  if (digits.length <= 5) return `${digits.slice(0, 2)} ${digits.slice(2)}`;
+
+  return `${digits.slice(0, 2)} ${digits.slice(2, 5)} ${digits.slice(5)}`;
+}
+
 type PartnerPhoneFieldProps = {
   countryCodeLabel: string;
   errorMessage?: string;
@@ -54,13 +63,17 @@ export function PartnerPhoneField({
         <input
           type="tel"
           inputMode="numeric"
-          pattern="[0-9]*"
+          pattern="[0-9 ]*"
           placeholder={placeholder}
           className="h-full w-full bg-transparent px-3 text-base text-secondary outline-none placeholder:text-secondary/45"
-          maxLength={12}
-          {...register("phone")}
+          maxLength={11}
+          {...register("phone", {
+            setValueAs: (value) => String(value ?? "").replace(/\D/g, ""),
+          })}
           onInput={(event) => {
-            event.currentTarget.value = event.currentTarget.value.replace(/\D/g, "");
+            event.currentTarget.value = formatSaudiLocalPhone(
+              event.currentTarget.value,
+            );
           }}
         />
       </div>

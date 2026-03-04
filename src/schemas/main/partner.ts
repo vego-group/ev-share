@@ -49,8 +49,7 @@ export const partnerSchema = z.object({
     .string()
     .trim()
     .regex(/^\d+$/, "errors.phoneDigitsOnly")
-    .min(8, "errors.phoneInvalid")
-    .max(12, "errors.phoneInvalid"),
+    .regex(/^[1-9]\d{8}$/, "errors.phoneInvalid"),
   city: z
     .string()
     .min(1, "errors.cityRequired")
@@ -63,3 +62,5 @@ export const partnerSchema = z.object({
 
 export type PartnerSchema = z.infer<typeof partnerSchema>;
 export type PartnerFormValues = PartnerSchema;
+
+
