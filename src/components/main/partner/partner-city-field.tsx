@@ -1,5 +1,5 @@
 import { UseFormRegister } from "react-hook-form";
-import { type PartnerSchema } from "@/schemas";
+import { type PartnerSchemaInput } from "@/schemas";
 import {
   errorTextClassName,
   fieldClassName,
@@ -16,7 +16,7 @@ type PartnerCityFieldProps = {
   label: string;
   options: CityOption[];
   placeholder: string;
-  register: UseFormRegister<PartnerSchema>;
+  register: UseFormRegister<PartnerSchemaInput>;
 };
 
 export function PartnerCityField({
@@ -47,3 +47,4 @@ export function PartnerCityField({
     </label>
   );
 }
+

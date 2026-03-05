@@ -43,13 +43,26 @@ export const saudiCityValues = [
   "shaqra",
 ] as const;
 
+function normalizeSaudiPhone(value: unknown) {
+  let digits = String(value ?? "").replace(/\D/g, "");
+
+  if (digits.startsWith("0")) {
+    digits = digits.slice(1);
+  }
+
+  if (digits.startsWith("966")) {
+    digits = digits.slice(3);
+  }
+
+  return `966${digits}`;
+}
+
 export const partnerSchema = z.object({
-  fullName: z.string().trim().min(2, "errors.fullNameMin").max(80, "errors.fullNameMax"),
-  phone: z
-    .string()
-    .trim()
-    .regex(/^\d+$/, "errors.phoneDigitsOnly")
-    .regex(/^[1-9]\d{8}$/, "errors.phoneInvalid"),
+  name: z.string().trim().min(2, "errors.fullNameMin"),
+  phone: z.preprocess(
+    normalizeSaudiPhone,
+    z.string().regex(/^9665\d{8}$/, "errors.phoneInvalid"),
+  ),
   city: z
     .string()
     .min(1, "errors.cityRequired")
@@ -60,7 +73,6 @@ export const partnerSchema = z.object({
     ),
 });
 
-export type PartnerSchema = z.infer<typeof partnerSchema>;
+export type PartnerSchema = z.output<typeof partnerSchema>;
+export type PartnerSchemaInput = z.input<typeof partnerSchema>;
 export type PartnerFormValues = PartnerSchema;
-
-

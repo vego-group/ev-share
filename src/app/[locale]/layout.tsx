@@ -7,6 +7,7 @@ import { setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,6 +53,7 @@ export default async function RootLayout({
             <Navbar />
             <main className="min-h-[calc(100svh-160px)]"> {children}</main>
             <Footer />
+            <Toaster />
           </NextIntlClientProvider>
         </div>
       </body>

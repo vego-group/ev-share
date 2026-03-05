@@ -1,16 +1,30 @@
 import Image from "next/image";
 import { UseFormRegister } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-import { type PartnerSchema } from "@/schemas";
+import { type PartnerSchemaInput } from "@/schemas";
 import { errorTextClassName } from "./partner-field-styles";
 
+function getSaudiLocalDigits(value: string) {
+  let digits = value.replace(/\D/g, "");
+
+  if (digits.startsWith("0")) {
+    digits = digits.slice(1);
+  }
+
+  if (digits.startsWith("966")) {
+    digits = digits.slice(3);
+  }
+
+  return digits.slice(0, 9);
+}
+
 function formatSaudiLocalPhone(value: string) {
-  const digits = value.replace(/\D/g, "").slice(0, 9);
+  const digits = getSaudiLocalDigits(value);
 
-  if (digits.length <= 2) return digits;
-  if (digits.length <= 5) return `${digits.slice(0, 2)} ${digits.slice(2)}`;
+  if (digits.length <= 3) return digits;
+  if (digits.length <= 6) return `${digits.slice(0, 3)} ${digits.slice(3)}`;
 
-  return `${digits.slice(0, 2)} ${digits.slice(2, 5)} ${digits.slice(5)}`;
+  return `${digits.slice(0, 3)} ${digits.slice(3, 6)} ${digits.slice(6)}`;
 }
 
 type PartnerPhoneFieldProps = {
@@ -19,7 +33,7 @@ type PartnerPhoneFieldProps = {
   flagAlt: string;
   label: string;
   placeholder: string;
-  register: UseFormRegister<PartnerSchema>;
+  register: UseFormRegister<PartnerSchemaInput>;
 };
 
 export function PartnerPhoneField({
@@ -32,7 +46,9 @@ export function PartnerPhoneField({
 }: PartnerPhoneFieldProps) {
   return (
     <label className="block">
-      <span className="mb-2 block text-sm font-medium text-secondary">{label}</span>
+      <span className="mb-2 block text-sm font-medium text-secondary">
+        {label}
+      </span>
       <div
         dir="ltr"
         className={`flex h-13 w-full overflow-hidden rounded-2xl border bg-white ${
@@ -57,7 +73,7 @@ export function PartnerPhoneField({
             className="rounded-[2px] object-cover"
           />
           <span className="text-sm font-medium" dir="ltr">
-            +966
+            966
           </span>
         </Button>
         <input
@@ -66,10 +82,8 @@ export function PartnerPhoneField({
           pattern="[0-9 ]*"
           placeholder={placeholder}
           className="h-full w-full bg-transparent px-3 text-base text-secondary outline-none placeholder:text-secondary/45"
-          maxLength={11}
-          {...register("phone", {
-            setValueAs: (value) => String(value ?? "").replace(/\D/g, ""),
-          })}
+          maxLength={12}
+          {...register("phone")}
           onInput={(event) => {
             event.currentTarget.value = formatSaudiLocalPhone(
               event.currentTarget.value,
@@ -77,7 +91,11 @@ export function PartnerPhoneField({
           }}
         />
       </div>
-      {errorMessage ? <p className={errorTextClassName}>{errorMessage}</p> : null}
+      {errorMessage ? (
+        <p className={errorTextClassName}>{errorMessage}</p>
+      ) : null}
     </label>
   );
 }
+
+

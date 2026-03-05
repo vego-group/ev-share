@@ -1,5 +1,5 @@
 import { UseFormRegister } from "react-hook-form";
-import { type PartnerSchema } from "@/schemas";
+import { type PartnerSchemaInput } from "@/schemas";
 import {
   errorTextClassName,
   fieldClassName,
@@ -10,7 +10,7 @@ type PartnerFullNameFieldProps = {
   errorMessage?: string;
   label: string;
   placeholder: string;
-  register: UseFormRegister<PartnerSchema>;
+  register: UseFormRegister<PartnerSchemaInput>;
 };
 
 export function PartnerFullNameField({
@@ -21,14 +21,19 @@ export function PartnerFullNameField({
 }: PartnerFullNameFieldProps) {
   return (
     <label className="block">
-      <span className="mb-2 block text-sm font-medium text-secondary">{label}</span>
+      <span className="mb-2 block text-sm font-medium text-secondary">
+        {label}
+      </span>
       <input
         type="text"
         placeholder={placeholder}
         className={`${fieldClassName} ${errorMessage ? fieldErrorClassName : ""}`}
-        {...register("fullName")}
+        {...register("name")}
       />
-      {errorMessage ? <p className={errorTextClassName}>{errorMessage}</p> : null}
+      {errorMessage ? (
+        <p className={errorTextClassName}>{errorMessage}</p>
+      ) : null}
     </label>
   );
 }
+

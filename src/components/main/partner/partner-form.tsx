@@ -3,49 +3,65 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
-import { partnerSchema, type PartnerSchema, saudiCityValues } from "@/schemas";
+import {
+  PartnerFormValues,
+  partnerSchema,
+  type PartnerSchemaInput,
+  saudiCityValues,
+} from "@/schemas";
 import { PartnerCityField } from "./partner-city-field";
 import { PartnerFullNameField } from "./partner-full-name-field";
 import { PartnerPhoneField } from "./partner-phone-field";
 import { PartnerSubmitButton } from "./partner-submit-button";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { partnerAPI } from "@/services/mutations";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 type PartnerFormProps = {
   reduceMotion: boolean;
 };
 
 export function PartnerForm({ reduceMotion }: PartnerFormProps) {
+  const router = useRouter();
   const t = useTranslations("PartnerPage");
   const getValidationMsg = (msg?: string) =>
     msg ? t(msg as never) : undefined;
 
   const {
-    formState: { errors },
+    formState: { errors, isSubmitting },
     handleSubmit,
     register,
-  } = useForm<PartnerSchema>({
+  } = useForm<PartnerSchemaInput, unknown, PartnerFormValues>({
     resolver: zodResolver(partnerSchema),
     defaultValues: {
       city: "",
-      fullName: "",
+      name: "",
       phone: "",
     },
-    mode: "onSubmit",
+    mode: "onChange",
   });
-
-  const onSubmit = handleSubmit(() => {});
 
   const cityOptions = saudiCityValues.map((cityValue) => ({
     label: t(`cities.${cityValue}`),
     value: cityValue,
   }));
 
+  const onSubmit = async (data: PartnerFormValues) => {
+    const result = await partnerAPI(data);
+    if (result?.ok) {
+      toast.success(result?.message);
+      router.push("/");
+      return;
+    }
+    toast.error(result?.message);
+  };
   return (
     <motion.form
       initial={reduceMotion ? undefined : { opacity: 0, y: 14 }}
       animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      onSubmit={onSubmit}
+      onSubmit={handleSubmit(onSubmit)}
       className="mt-8 space-y-5"
     >
       <PartnerFullNameField
@@ -53,7 +69,7 @@ export function PartnerForm({ reduceMotion }: PartnerFormProps) {
         placeholder={t("fullNamePlaceholder")}
         register={register}
         errorMessage={
-          getValidationMsg(errors.fullName?.message) ?? errors.fullName?.message
+          getValidationMsg(errors.name?.message) ?? errors.name?.message
         }
       />
 
@@ -78,7 +94,10 @@ export function PartnerForm({ reduceMotion }: PartnerFormProps) {
         }
       />
 
-      <PartnerSubmitButton label={t("submitButton")} />
+      <PartnerSubmitButton
+        label={t("submitButton")}
+        isSubmitting={isSubmitting}
+      />
     </motion.form>
   );
 }
