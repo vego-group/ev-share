@@ -73,7 +73,7 @@ export function PartnerPhoneField({
             className="rounded-[2px] object-cover"
           />
           <span className="text-sm font-medium" dir="ltr">
-            966
+            +966
           </span>
         </Button>
         <input
@@ -97,5 +97,3 @@ export function PartnerPhoneField({
     </label>
   );
 }
-
-
