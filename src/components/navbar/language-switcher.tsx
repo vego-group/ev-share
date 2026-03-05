@@ -3,6 +3,7 @@
 import { Globe } from "lucide-react";
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
+import { Button } from "@/components/ui/button";
 
 export function LanguageSwitcher() {
   const locale = useLocale();
@@ -16,16 +17,17 @@ export function LanguageSwitcher() {
   };
 
   return (
-    <button
+    <Button
       type="button"
       onClick={handleSwitch}
-      className="inline-flex h-11 items-center gap-2 rounded-full border border-primary/40 bg-secondary px-4 text-sm font-medium text-primary transition hover:border-primary"
+      variant="secondary"
+      className="h-11 rounded-full border border-primary/40 bg-secondary px-4 text-primary hover:border-primary hover:bg-secondary"
       aria-label={`Switch language to ${nextLocale.toUpperCase()}`}
     >
       <span>{locale.toUpperCase()}</span>
       <span className="inline-flex size-5 items-center justify-center rounded-full bg-primary text-secondary">
         <Globe size={12} />
       </span>
-    </button>
+    </Button>
   );
 }
