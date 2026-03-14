@@ -159,6 +159,11 @@
     "countryCodeLabel": "Saudi Arabia code +966",
     "flagAlt": "Saudi Arabia Flag",
     "submitButton": "Submit",
+    "successModal": {
+      "title": "Done Successfully!",
+      "description": "Your request has been submitted and we will contact you as soon as possible.",
+      "confirmButton": "OK"
+    },
     "errors": {
       "cityRequired": "Please select a city.",
       "fullNameMax": "Full name must be less than 80 characters.",
