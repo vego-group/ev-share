@@ -1,5 +1,6 @@
 import { AppStepsSection } from "./app-steps";
 import { AssetShowcaseSection } from "./asset-showcase";
+import { AppDownloadBanner } from "./banner";
 import { ChooseAssetSection } from "./choose-asset";
 import { HeroSection } from "./hero";
 import { PassiveIncomeSection } from "./passive-income";
@@ -11,6 +12,7 @@ function Landing() {
   return (
     <>
       <HeroSection />
+      <AppDownloadBanner />
       <PassiveIncomeSection />
       <ChooseAssetSection />
       <AssetShowcaseSection />

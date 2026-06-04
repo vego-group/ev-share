@@ -1,3 +1,5 @@
+import type { LucideIcon } from "lucide-react";
+
 export interface ShowcaseCard {
   key: string;
   imageSrc: string;
@@ -15,4 +17,11 @@ export interface AppStep {
 export interface FloatingAsset {
   src: string;
   className: string;
+}
+
+export interface AppProofPoint {
+  key: string;
+  icon: LucideIcon;
+  labelKey: string;
+  valueKey: string;
 }

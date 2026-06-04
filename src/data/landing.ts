@@ -1,4 +1,5 @@
-import { AppStep, FloatingAsset, ShowcaseCard } from "@/interfaces";
+import { MapPinned, QrCode, Store } from "lucide-react";
+import { AppProofPoint, AppStep, FloatingAsset, ShowcaseCard } from "@/interfaces";
 
 export const showcaseCards: ShowcaseCard[] = [
   {
@@ -33,4 +34,25 @@ export const floatingAssets: FloatingAsset[] = [
   { src: "/images/car.jpg", className: "-start-8 top-28" },
   { src: "/images/scooter.jpg", className: "-end-10 top-36" },
   { src: "/images/bike.jpg", className: "start-1/2 -translate-x-1/2 bottom-8" },
+];
+
+export const appProofPoints: AppProofPoint[] = [
+  {
+    key: "map",
+    icon: MapPinned,
+    labelKey: "proof.mapLabel",
+    valueKey: "proof.mapValue",
+  },
+  {
+    key: "scan",
+    icon: QrCode,
+    labelKey: "proof.scanLabel",
+    valueKey: "proof.scanValue",
+  },
+  {
+    key: "merchant",
+    icon: Store,
+    labelKey: "proof.merchantLabel",
+    valueKey: "proof.merchantValue",
+  },
 ];

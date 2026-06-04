@@ -8,9 +8,9 @@ import {
   PartnerFormValues,
   partnerSchema,
   type PartnerSchemaInput,
-  saudiCityValues,
 } from "@/schemas";
-import { PartnerCityField } from "./partner-city-field";
+import { PartnerDetailsField } from "./partner-details-field";
+import { PartnerEmailField } from "./partner-email-field";
 import { PartnerFullNameField } from "./partner-full-name-field";
 import { PartnerPhoneField } from "./partner-phone-field";
 import { PartnerSubmitButton } from "./partner-submit-button";
@@ -38,17 +38,13 @@ export function PartnerForm({ reduceMotion }: PartnerFormProps) {
   } = useForm<PartnerSchemaInput, unknown, PartnerFormValues>({
     resolver: zodResolver(partnerSchema),
     defaultValues: {
-      city: "",
+      details: "",
+      email: "",
       name: "",
       phone: "",
     },
     mode: "onChange",
   });
-
-  const cityOptions = saudiCityValues.map((cityValue) => ({
-    label: t(`cities.${cityValue}`),
-    value: cityValue,
-  }));
 
   const onSubmit = async (data: PartnerFormValues) => {
     const result = await partnerAPI(data);
@@ -82,6 +78,15 @@ export function PartnerForm({ reduceMotion }: PartnerFormProps) {
           }
         />
 
+        <PartnerEmailField
+          label={t("emailLabel")}
+          placeholder={t("emailPlaceholder")}
+          register={register}
+          errorMessage={
+            getValidationMsg(errors.email?.message) ?? errors.email?.message
+          }
+        />
+
         <PartnerPhoneField
           label={t("phoneLabel")}
           placeholder={t("phonePlaceholder")}
@@ -93,13 +98,13 @@ export function PartnerForm({ reduceMotion }: PartnerFormProps) {
           }
         />
 
-        <PartnerCityField
-          label={t("cityLabel")}
-          placeholder={t("cityPlaceholder")}
-          options={cityOptions}
+        <PartnerDetailsField
+          label={t("detailsLabel")}
+          placeholder={t("detailsPlaceholder")}
           register={register}
           errorMessage={
-            getValidationMsg(errors.city?.message) ?? errors.city?.message
+            getValidationMsg(errors.details?.message) ??
+            errors.details?.message
           }
         />
 

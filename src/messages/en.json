@@ -6,7 +6,24 @@
       "tag": "with EV Share",
       "description": "Simply put, you own an income-generating asset.",
       "benefits": "Start earning daily returns with low upfront investment and build a steady recurring income stream.",
-      "primaryCta": "Start now"
+      "primaryCta": "Start now",
+      "secondaryCta": "Learn more"
+    },
+    "appBanner": {
+      "eyebrow": "EV Share for riders and merchants",
+      "title": "One app to ride smarter and manage mobility assets",
+      "description": "Riders can find active scooters or bikes on the map, scan any mobility QR code, and start a trip in seconds. Merchants can manage assets, operations, and performance from the same EV Share ecosystem.",
+      "googlePlay": "Google Play",
+      "appStore": "App Store",
+      "mockupAlt": "EV Share app mockup for riders and merchants",
+      "proof": {
+        "mapLabel": "Live map",
+        "mapValue": "Find active scooters and bikes",
+        "scanLabel": "QR unlock",
+        "scanValue": "Scan and start your trip",
+        "merchantLabel": "Merchant tools",
+        "merchantValue": "Track assets and operations"
+      }
     },
     "quickStart": {
       "title": "Start in minutes",
@@ -152,10 +169,12 @@
     "description": "Share your details and we will contact you soon.",
     "fullNameLabel": "Full Name",
     "fullNamePlaceholder": "Ahmed Mohamed",
+    "emailLabel": "Email",
+    "emailPlaceholder": "ahmed@example.com",
     "phoneLabel": "Mobile Number",
     "phonePlaceholder": "552253991",
-    "cityLabel": "City",
-    "cityPlaceholder": "Select your city",
+    "detailsLabel": "Details",
+    "detailsPlaceholder": "Need help with EV charging",
     "countryCodeLabel": "Saudi Arabia code +966",
     "flagAlt": "Saudi Arabia Flag",
     "submitButton": "Submit",
@@ -165,7 +184,9 @@
       "confirmButton": "OK"
     },
     "errors": {
-      "cityRequired": "Please select a city.",
+      "detailsMax": "Details are too long.",
+      "detailsMin": "Please add more details.",
+      "emailInvalid": "Please enter a valid email address.",
       "fullNameMax": "Full name must be less than 80 characters.",
       "fullNameMin": "Full name must be at least 2 characters.",
       "phoneDigitsOnly": "Mobile number must contain digits only.",
