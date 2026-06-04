@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { UseFormRegister } from "react-hook-form";
 import { Button } from "@/components/ui/button";
+import InputErrorMessage from "@/components/ui/InputErrorMessage";
 import { type PartnerSchemaInput } from "@/schemas";
-import { errorTextClassName } from "./partner-field-styles";
 
 function getSaudiLocalDigits(value: string) {
   let digits = value.replace(/\D/g, "");
@@ -91,9 +91,7 @@ export function PartnerPhoneField({
           }}
         />
       </div>
-      {errorMessage ? (
-        <p className={errorTextClassName}>{errorMessage}</p>
-      ) : null}
+      <InputErrorMessage msg={errorMessage} />
     </label>
   );
 }

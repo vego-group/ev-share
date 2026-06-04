@@ -3,6 +3,10 @@ import { z } from "zod";
 function normalizeSaudiPhone(value: unknown) {
   let digits = String(value ?? "").replace(/\D/g, "");
 
+  if (!digits) {
+    return "";
+  }
+
   if (digits.startsWith("0")) {
     digits = digits.slice(1);
   }
@@ -15,12 +19,24 @@ function normalizeSaudiPhone(value: unknown) {
 }
 
 export const partnerSchema = z.object({
-  name: z.string().trim().min(2, "errors.fullNameMin").max(80, "errors.fullNameMax"),
+  name: z
+    .string()
+    .trim()
+    .min(1, "errors.fullNameRequired")
+    .min(2, "errors.fullNameMin")
+    .max(80, "errors.fullNameMax"),
   phone: z.preprocess(
     normalizeSaudiPhone,
-    z.string().regex(/^9665\d{8}$/, "errors.phoneInvalid"),
+    z
+      .string()
+      .min(1, "errors.phoneRequired")
+      .regex(/^9665\d{8}$/, "errors.phoneInvalid"),
   ),
-  email: z.string().trim().email("errors.emailInvalid"),
+  email: z
+    .string()
+    .trim()
+    .min(1, "errors.emailRequired")
+    .email("errors.emailInvalid"),
   details: z.string().trim().min(10, "errors.detailsMin").max(1000, "errors.detailsMax"),
 });
 

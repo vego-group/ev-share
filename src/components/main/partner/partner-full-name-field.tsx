@@ -1,10 +1,7 @@
 import { UseFormRegister } from "react-hook-form";
+import InputErrorMessage from "@/components/ui/InputErrorMessage";
 import { type PartnerSchemaInput } from "@/schemas";
-import {
-  errorTextClassName,
-  fieldClassName,
-  fieldErrorClassName,
-} from "./partner-field-styles";
+import { getFieldClassName } from "./partner-field-styles";
 
 type PartnerFullNameFieldProps = {
   errorMessage?: string;
@@ -27,12 +24,10 @@ export function PartnerFullNameField({
       <input
         type="text"
         placeholder={placeholder}
-        className={`${fieldClassName} ${errorMessage ? fieldErrorClassName : ""}`}
+        className={getFieldClassName(Boolean(errorMessage))}
         {...register("name")}
       />
-      {errorMessage ? (
-        <p className={errorTextClassName}>{errorMessage}</p>
-      ) : null}
+      <InputErrorMessage msg={errorMessage} />
     </label>
   );
 }
