@@ -37,7 +37,12 @@ export const partnerSchema = z.object({
     .trim()
     .min(1, "errors.emailRequired")
     .email("errors.emailInvalid"),
-  details: z.string().trim().min(10, "errors.detailsMin").max(1000, "errors.detailsMax"),
+  details: z
+    .string()
+    .trim()
+    .min(1, "errors.detailsRequired")
+    .min(10, "errors.detailsMin")
+    .max(1000, "errors.detailsMax"),
 });
 
 export type PartnerSchema = z.output<typeof partnerSchema>;

@@ -186,6 +186,7 @@
     "errors": {
       "detailsMax": "Details are too long.",
       "detailsMin": "Please add more details.",
+      "detailsRequired": "Please enter details.",
       "emailInvalid": "Please enter a valid email address.",
       "emailRequired": "Please enter your email address.",
       "fullNameMax": "Full name must be less than 80 characters.",
