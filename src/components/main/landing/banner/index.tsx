@@ -5,7 +5,6 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Apple, ArrowUpRight, Play } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
-import { appProofPoints } from "@/data";
 import { APP_STORE_URL, GOOGLE_PLAY_URL } from "@/constants";
 
 export function AppDownloadBanner() {
@@ -66,27 +65,6 @@ export function AppDownloadBanner() {
                 <ArrowUpRight className="size-4" />
               </a>
             </Button>
-          </div>
-
-          <div className="mt-7 grid gap-3 sm:grid-cols-3">
-            {appProofPoints.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.key}
-                  className="rounded-2xl border border-white/10 bg-white/8 p-4"
-                >
-                  <Icon className="size-5 text-primary" />
-                  <p className="mt-3 text-sm text-white/62">
-                    {t(item.labelKey)}
-                  </p>
-                  <p className="mt-1 lg:text-lg font-bold leading-tight">
-                    {t(item.valueKey)}
-                  </p>
-                </div>
-              );
-            })}
           </div>
         </div>
         <motion.div

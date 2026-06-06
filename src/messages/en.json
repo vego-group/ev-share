@@ -10,18 +10,21 @@
       "secondaryCta": "Learn more"
     },
     "appBanner": {
-      "eyebrow": "EV Share for riders and merchants",
-      "title": "One app to ride smarter and manage mobility assets",
-      "description": "Riders can find active scooters or bikes on the map, scan any mobility QR code, and start a trip in seconds. Merchants can manage assets, operations, and performance from the same EV Share ecosystem.",
+      "eyebrow": "EV Share for asset owners",
+      "title": "One app to manage mobility assets and track returns",
+      "description": "Follow your assets, operation status, and daily performance from the EV Share platform. Keep visibility on income, expenses, and asset activity without handling day-to-day operations.",
       "googlePlay": "Google Play",
       "appStore": "App Store",
-      "mockupAlt": "EV Share app mockup for riders and merchants",
+      "mockupAlt": "EV Share app mockup",
+      "dashboardLabel": "Asset dashboard",
+      "dashboardValue": "Daily performance",
+      "dashboardStatus": "Live",
       "proof": {
-        "mapLabel": "Live map",
-        "mapValue": "Find active scooters and bikes",
-        "scanLabel": "QR unlock",
-        "scanValue": "Scan and start your trip",
-        "merchantLabel": "Merchant tools",
+        "assetsLabel": "Asset control",
+        "assetsValue": "Monitor every owned asset",
+        "returnsLabel": "Income tracking",
+        "returnsValue": "Review daily returns clearly",
+        "merchantLabel": "Operations view",
         "merchantValue": "Track assets and operations"
       }
     },

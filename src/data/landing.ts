@@ -1,4 +1,4 @@
-import { MapPinned, QrCode, Store } from "lucide-react";
+import { ChartNoAxesCombined, CircleDollarSign, Store } from "lucide-react";
 import { AppProofPoint, AppStep, FloatingAsset, ShowcaseCard } from "@/interfaces";
 
 export const showcaseCards: ShowcaseCard[] = [
@@ -38,20 +38,20 @@ export const floatingAssets: FloatingAsset[] = [
 
 export const appProofPoints: AppProofPoint[] = [
   {
-    key: "map",
-    icon: MapPinned,
-    labelKey: "proof.mapLabel",
-    valueKey: "proof.mapValue",
-  },
-  {
-    key: "scan",
-    icon: QrCode,
-    labelKey: "proof.scanLabel",
-    valueKey: "proof.scanValue",
-  },
-  {
-    key: "merchant",
+    key: "assets",
     icon: Store,
+    labelKey: "proof.assetsLabel",
+    valueKey: "proof.assetsValue",
+  },
+  {
+    key: "returns",
+    icon: CircleDollarSign,
+    labelKey: "proof.returnsLabel",
+    valueKey: "proof.returnsValue",
+  },
+  {
+    key: "performance",
+    icon: ChartNoAxesCombined,
     labelKey: "proof.merchantLabel",
     valueKey: "proof.merchantValue",
   },
