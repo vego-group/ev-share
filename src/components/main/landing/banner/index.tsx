@@ -30,7 +30,7 @@ export function AppDownloadBanner() {
         />
         <div
           aria-hidden="true"
-          className="absolute -end-24 top-10 h-72 w-72 rounded-full border border-white/10"
+          className="absolute -inset-e-24 top-10 h-72 w-72 rounded-full border border-white/10"
         />
         <div className="relative z-10 max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
@@ -76,9 +76,9 @@ export function AppDownloadBanner() {
           }
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.65, delay: 0.12 }}
-          className="relative z-10 mx-auto mt-10 w-full max-w-[420px] md:mt-0 lg:max-w-[460px]"
+          className="relative z-10 mx-auto mt-10 w-full max-w-105 md:mt-0 lg:max-w-115"
         >
-          <div className="relative aspect-[16/10] overflow-hidden rounded-[28px]">
+          <div className="relative aspect-16/10 overflow-hidden rounded-[28px]">
             <Image
               src="/images/ev-share-mockup.png"
               alt={t("mockupAlt")}
