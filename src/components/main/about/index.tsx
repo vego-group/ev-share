@@ -13,6 +13,7 @@ function About() {
           alt={t("logoAlt")}
           fill
           priority
+          sizes="(min-width: 768px) 460px, 300px"
           className="object-contain"
         />
       </div>

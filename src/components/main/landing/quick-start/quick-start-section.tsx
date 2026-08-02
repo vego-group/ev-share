@@ -45,6 +45,7 @@ export function QuickStartSection() {
               alt={t("mobileAlt")}
               fill
               priority
+              sizes="(min-width: 768px) 250px, 210px"
               className="object-contain"
             />
             <QuickStartFloatingAssets />

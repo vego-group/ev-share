@@ -13,6 +13,7 @@ export function Logo() {
           fill
           src="/images/logo.svg"
           alt="EV Share"
+          sizes="(min-width: 768px) 180px, 140px"
           className="object-contain object-center"
           priority
         />

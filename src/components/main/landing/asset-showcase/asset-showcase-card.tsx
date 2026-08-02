@@ -18,6 +18,7 @@ export function AssetShowcaseCard({
         src={imageSrc}
         alt={title}
         fill
+        sizes="(min-width: 1024px) 34vw, 100vw"
         className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
       />
 

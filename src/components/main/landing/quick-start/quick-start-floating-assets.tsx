@@ -20,7 +20,13 @@ export function QuickStartFloatingAssets() {
             repeat: Infinity,
           }}
         >
-          <Image src={asset.src} alt="" fill className="object-cover" />
+          <Image
+            src={asset.src}
+            alt=""
+            fill
+            sizes="80px"
+            className="object-cover"
+          />
         </motion.div>
       ))}
     </div>

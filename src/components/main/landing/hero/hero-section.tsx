@@ -11,22 +11,16 @@ export function HeroSection() {
 
   return (
     <section className="-mt-0.5 relative min-h-[calc(100svh-76px)] overflow-hidden bg-secondary pt-0.5">
-      <motion.div
-        initial={reduceMotion ? undefined : { scale: 1.06, opacity: 0.72 }}
-        animate={reduceMotion ? undefined : { scale: 1, opacity: 1 }}
-        transition={{
-          duration: 1.2,
-        }}
-        className="absolute inset-0"
-      >
+      <div className="absolute inset-0">
         <Image
           src="/images/hero.jpg"
           alt={t("backgroundAlt")}
           fill
           priority
+          sizes="100vw"
           className="object-cover object-center"
         />
-      </motion.div>
+      </div>
 
       <motion.div
         initial={reduceMotion ? undefined : { opacity: 0 }}
