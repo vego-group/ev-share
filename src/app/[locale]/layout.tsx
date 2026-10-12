@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Alexandria, Manrope } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
@@ -7,16 +7,18 @@ import { setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Toaster } from "react-hot-toast";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-latin",
   subsets: ["latin"],
-  fallback: ["system-ui", "arial"],
+  display: "swap",
+  fallback: ["Arial", "sans-serif"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  fallback: ["ui-monospace", "SFMono-Regular", "Consolas", "monospace"],
+const alexandria = Alexandria({
+  variable: "--font-arabic",
+  subsets: ["arabic"],
+  display: "swap",
+  fallback: ["Tahoma", "Arial", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -43,7 +45,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${manrope.variable} ${alexandria.variable} antialiased`}
       >
         <div className="min-h-svh">
           <NextIntlClientProvider>
